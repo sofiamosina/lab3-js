@@ -7,14 +7,14 @@ window.onload = function () {
   let companyName = "Amazon";
   let salary = "80k";
   document.querySelector(
-    ".lab1_ex1"
+    "#lab1_ex1"
   ).innerHTML = `You will be a ${jobTitle} in ${geoLocation}, making ${salary} for ${companyName}.`;
 
   //EXERCISE 2: The Age Calculator
   //Forgot how old someone is? Calculate it! Store the current year in a variable. Store their birth year in a variable. Calculate their age based on the stored values. Output them to the console like so: "They are NN years old.", substituting the values.
   let currentYear = new Date().getFullYear();
   let birthYear = 1997;
-  document.querySelector(".lab1_ex2").innerHTML = `They are ${
+  document.querySelector("#lab1_ex2").innerHTML = `They are ${
     currentYear - birthYear
   } years old.`;
 
@@ -23,7 +23,7 @@ window.onload = function () {
   let currentAge = new Date().getFullYear() - birthYear;
   let maxAge = 100;
   let estAmount = 2;
-  document.querySelector(".lab1_ex3").innerHTML = `You will need ${
+  document.querySelector("#lab1_ex3").innerHTML = `You will need ${
     (maxAge - currentAge) * estAmount * 365
   } pizzas to last you until the ripe old age of ${maxAge}.`;
 
@@ -33,14 +33,14 @@ window.onload = function () {
   let circumference = 2 * 3.14 * radius;
   let area = (3.14 * radius) ** 2;
   document.querySelector(
-    ".lab1_ex4"
+    "#lab1_ex4"
   ).innerHTML = `The circumference is ${circumference}. The area is ${area}.`;
 
   //EXERCISE 5: The Temperature Converter
   //It's hot out! Let's make a converter based on the steps here. Store a celsius temperature into a variable. Convert it to fahrenheit and output "NN°C is NN°F".  Now store a fahrenheit temperature into a variable. Convert it to celsius and output "NN°F is NN°C."
   let tempCel = 20;
   let tempFar = 50;
-  document.querySelector(".lab1_ex5").innerHTML = `${tempCel}°C is ${
+  document.querySelector("#lab1_ex5").innerHTML = `${tempCel}°C is ${
     (tempCel * 9) / 5 + 32
   }°F. ${tempFar}°F is ${((tempFar - 32) * 5) / 9}°C.`;
 
@@ -51,7 +51,7 @@ window.onload = function () {
     return number ** 2;
   }
   document.querySelector(
-    ".lab2_ex1"
+    "#lab2_ex1"
   ).innerHTML = `The result of squaring the number 3 is ${squareNumber(3)}.`;
 
   // EXERCISE 2
@@ -59,7 +59,7 @@ window.onload = function () {
   function halfNumber(number) {
     return number / 2;
   }
-  document.querySelector(".lab2_ex2").innerHTML = `Half of 5 is ${halfNumber(
+  document.querySelector("#lab2_ex2").innerHTML = `Half of 5 is ${halfNumber(
     5
   )}.`;
 
@@ -68,7 +68,7 @@ window.onload = function () {
   function percentOf(num1, num2) {
     return (num1 / num2) * 100;
   }
-  document.querySelector(".lab2_ex3").innerHTML = `2 is ${percentOf(
+  document.querySelector("#lab2_ex3").innerHTML = `2 is ${percentOf(
     2,
     4
   )}% of 4.`;
@@ -79,7 +79,7 @@ window.onload = function () {
   function areaOfCircle(radius) {
     return (radius * Math.PI * 2).toFixed(2);
   }
-  document.querySelector(".lab2_ex4").innerHTML = `The area for a circle with radius 2 is ${areaOfCircle(2)}.`;
+  document.querySelector("#lab2_ex4").innerHTML = `The area for a circle with radius 2 is ${areaOfCircle(2)}.`;
 
   // EXERCISE 5
   // Write a function named runAll that will take one argument (a number) and perform the following operations, using the functions you wrote earlier
@@ -95,5 +95,5 @@ window.onload = function () {
     return d;
     //return percentOf(areaOfCircle(b), b);
   }
-  document.querySelector(".lab2_ex5").innerHTML = runAll(4);
+  document.querySelector("#lab2_ex5").innerHTML = runAll(4);
 };
